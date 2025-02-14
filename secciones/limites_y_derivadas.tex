@@ -1,0 +1,57 @@
+\section{Límites y Derivadas}
+
+\begin{enumerate}
+    \item $ \lim\limits_{x \to 2} \frac{x^2 - 4}{x - 2} $
+    
+    \textbf{Caso: Diferencia de Cuadrados}
+    \[ \lim\limits_{x \to 2} \frac{(x+2)(x-2)}{x-2} = \lim\limits_{x \to 2} x+2 = 4 \]
+    
+    \item $ \lim\limits_{x \to 0} \frac{\sin x}{x} $
+    
+    \textbf{Regla de L'Hôpital}
+    \[ \lim\limits_{x \to a} \frac{f(x)}{g(x)} = \lim\limits_{x \to a} \frac{f'(x)}{g'(x)} \]
+    Para los casos $ \frac{0}{0} $ o $ \frac{\infty}{\infty} $:
+    \[ \lim\limits_{x \to 0} \frac{\cos x}{1} = \frac{1}{1} = 1 \]
+    
+    \item $ \lim\limits_{x \to \infty} \frac{3x^2 + 5}{2x^2 - 7} $
+    
+    \textbf{Se divide todo por el mayor exponente}
+    \[ \lim\limits_{x \to \infty} \frac{K}{x^n} = 0 \]
+    
+    \[ \lim\limits_{x \to \infty} \frac{\frac{3x^2}{x^2} + \frac{5}{x^2}}{\frac{2x^2}{x^2} - \frac{7}{x^2}} = \frac{3 + 0}{2 - 0} = \frac{3}{2} = 1.5 \]
+    
+\end{enumerate}
+
+\section*{Cálculo de Derivadas}
+
+Calcule la derivada de las siguientes funciones:
+
+\begin{enumerate}
+    \item \( f(x) = x^3 - 4x + 2 \)
+    
+    \[
+    f'(x) = 3x^2 - 4
+    \]
+
+    \item \( g(x) = e^x \sin x \)
+    
+    \[
+    g'(x) = e^x \sin x + e^x \cos x
+    \]
+    
+    \[
+    g'(x) = e^x (\sin x + \cos x)
+    \]
+
+    \item \( h(x) = \ln(x^2 + 1) \)
+    
+    \textcolor{red}{Regla de la cadena:}
+    
+    \[
+    \frac{d}{dx} \ln u = \frac{1}{u} \cdot u'
+    \]
+    
+    \[
+    h'(x) = \frac{2x}{x^2 + 1}
+    \]
+\end{enumerate}

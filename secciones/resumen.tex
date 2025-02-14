@@ -1,2 +1,97 @@
-\section{Lectura, Escritura y Exposición}
-Leer y hacer un resumen conciso de las sesiones 1.1, 1.2 y 1.3 de [4].
+\section{Geometría Cartesiana}
+En las secciones 1.1, 1.2 y 1.3 del libro \cite{4} se encuentran los conceptos básicos sobre plano Cartesiano y funciones:
+
+\section*{Ideas básicas}
+\begin{itemize}
+    \item La geometría cartesiana es fundamental para el desarrollo del cálculo integral, ya que permite representar puntos en el plano mediante coordenadas numéricas.
+    \item EL plano Cartesiano es un sistema de referencia, es decir, permite ubicar puntos mediante coordenadas, fue introducido por René Descartes (1596-1650) y se basa en el uso de un sistema de ejes perpendiculares.
+\end{itemize}
+
+Para el sistema de coordenadas cartesianas:
+\begin{itemize}
+    \item Se utilizan dos rectas perpendiculares: una horizontal (\textbf{eje x}) y otra vertical (\textbf{eje y}).
+    \item El punto de intersección de los ejes es el \textbf{origen (O)}.
+    \item Cada punto en el plano se representa mediante un par ordenado $(x,y)$, donde:
+    \begin{itemize}
+        \item $x$ es la \textbf{abscisa} (distancia al eje y).
+        \item $y$ es la \textbf{ordenada} (distancia al eje x).
+    \end{itemize}
+    \item Los signos de las coordenadas determinan el cuadrante en el que se encuentra el punto:
+    \begin{itemize}
+        \item \textbf{Primer cuadrante}: $x > 0, y > 0$
+        \item \textbf{Segundo cuadrante}: $x < 0, y > 0$
+        \item \textbf{Tercer cuadrante}: $x < 0, y < 0$
+        \item \textbf{Cuarto cuadrante}: $x > 0, y < 0$
+    \end{itemize}
+\end{itemize}
+
+\subsubsection*{Espacio tridimensional}
+\begin{itemize}
+    \item En el espacio, se utilizan tres ejes perpendiculares $(x, y, z)$ que se cortan en el origen.
+    \item Cada punto en el espacio se describe mediante tres coordenadas $(x, y, z)$.
+\end{itemize}
+
+\subsubsection*{Aplicaciones geométricas}
+\begin{itemize}
+    \item La ecuación de la circunferencia $r^2 = x^2 + y^2$, representa un punto $(x, y)$ que está a una distancia $|x|$ unidades desde el origen haste el eje vertical y una distancia $|y|$ desde el origen hasta el eje horizontal.
+\end{itemize}
+
+\subsection*{Funciones. Ideas generales y ejemplos}
+
+De manera informal se puede decir que asigna a cada elemento $x$ de un conjunto $X$ (dominio) un único elemento $y$ de otro conjunto $Y$ (imagen).
+
+Las funciones pueden representarse de varias maneras:
+\begin{itemize}
+    \item \textbf{Gráficas}: Los puntos $(x, f(x))$ forman la gráfica de la función en el plano cartesiano.
+    \item \textbf{Tablas}: Muestran pares $(x, y)$ de manera explícita.
+    \item \textbf{Fórmulas}: Expresan la relación entre $x$ y $y$ mediante ecuaciones algebráicas.
+\end{itemize}
+
+\subsubsection*{Ejemplos de funciones}
+\begin{itemize}
+    \item \textbf{Función identidad}: $f(x) = x$. Su gráfica es una recta que pasa por el origen y forma ángulos iguales con los ejes.
+    \item \textbf{Función valor absoluto}: $\phi(x) = |x|$. Asigna a cada número real $x$ su valor absoluto. Propiedades importantes:
+    \begin{itemize}
+        \item \( | -x | = |x| \).
+        \item \( |x^2| = x^2 \).
+        \item \( |x + y| \leq |x| + |y| \)
+        \item \( ||x|| = |x| \).
+        \item \( |x| = \sqrt{x^2} \).
+    \end{itemize}
+
+    \item \textbf{Función número primo}: $\pi(x)$, que cuenta los números primos menores o iguales a $x$. Su gráfica consiste en segmentos horizontales con saltos en los números primos.
+    \item \textbf{Función factorial}: $f(n) = n!$, que calcula el producto de todos los enteros positivos hasta $n$.
+\end{itemize}
+
+\subsubsection*{Propiedades de las funciones}
+\begin{itemize}
+    \item Para cada $x$ en el dominio $X$, existe un único $y$ en el recorrido $Y$.
+    \item Dos pares $(x, y)$ y $(x, z)$ no pueden existir con el mismo $x$ y valores distintos de $y$.
+\end{itemize}
+
+\section{Funciones. Definición formal como conjunto de pares ordenados}
+
+Una función \( f \) es un conjunto de pares ordenados \( (x,y) \), donde:
+\begin{itemize}
+    \item Cada \( x \) en el dominio \( X \) tiene exactamente un \( y \) asociado.
+    \item Dos pares \( (x,y) \) y \( (x,z) \) no pueden existir con el mismo \( x \) y valores distintos de \( y \).
+    \item La imagen de  \( x \) se denota como \( f(x) \).
+\end{itemize}
+
+\subsubsection*{Dominio y recorrido}
+\begin{itemize}
+    \item El \textbf{dominio} de \( f \) es el conjunto de todos los \( x \) que aparecen como primeros elementos en los pares \( (x,y) \).
+    \item El \textbf{recorrido} de \( f \) es el conjunto de todos los \( y \) que aparecen como segundos elementos en los pares \( (x,y) \).
+\end{itemize}
+
+\subsubsection*{Representación de funciones}
+\begin{itemize}
+    \item Una función puede imaginarse como una tabla con dos columnas: una para los valores de \( x \) (dominio) y otra para los valores de \( y \) (recorrido).
+    \item Para todo \( x \) en el dominio de \( f \), existe exactamente un \( y \) tal que \( (x,y) \in f \).
+\end{itemize}
+
+\subsubsection*{Teorema sobre la igualdad de funciones}
+\begin{itemize}
+    \item Tienen el mismo dominio.
+    \item \( f(x) = g(x) \) para todo \( x \) en el dominio.
+\end{itemize}

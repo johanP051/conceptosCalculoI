@@ -1,0 +1,21 @@
+\begin{tikzpicture}
+    \begin{axis}[
+        title={$g(x) = -0.2x^2$},
+        axis lines = middle,
+        grid = major,
+        enlargelimits = true,
+        xlabel={$x$},
+        ylabel={$y$},
+    ]
+    
+    % Función cuadrática
+    \addplot[domain=-5:5, samples=100, thick, blue] {-0.2*x^2};
+    
+    % Puntos marcados
+    \addplot[only marks, mark=*, mark options={black}, nodes near coords={A}] coordinates {(-2,0)};
+    \addplot[only marks, mark=*, mark options={black}, nodes near coords={B}] coordinates {(2,0)};
+    \addplot[only marks, mark=*, mark options={white}, scale=1.5] coordinates {(0,0)};
+    \addplot[only marks, mark=o, mark options={black}, scale=1.5, thick] coordinates {(0,0)};
+    
+    \end{axis}
+\end{tikzpicture}
