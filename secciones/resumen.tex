@@ -50,18 +50,90 @@ Las funciones pueden representarse de varias maneras:
 \subsubsection*{Ejemplos de funciones}
 \begin{itemize}
     \item \textbf{Función identidad}: $f(x) = x$. Su gráfica es una recta que pasa por el origen y forma ángulos iguales con los ejes.
-    \item \textbf{Función valor absoluto}: $\phi(x) = |x|$. Asigna a cada número real $x$ su valor absoluto. Propiedades importantes:
-    \begin{itemize}
-        \item \( | -x | = |x| \).
-        \item \( |x^2| = x^2 \).
-        \item \( |x + y| \leq |x| + |y| \)
-        \item \( ||x|| = |x| \).
-        \item \( |x| = \sqrt{x^2} \).
-    \end{itemize}
-
     \item \textbf{Función número primo}: $\pi(x)$, que cuenta los números primos menores o iguales a $x$. Su gráfica consiste en segmentos horizontales con saltos en los números primos.
     \item \textbf{Función factorial}: $f(n) = n!$, que calcula el producto de todos los enteros positivos hasta $n$.
+    \item \textbf{Función valor absoluto}: $\phi(x) = |x|$. Asigna a cada número real $x$ su valor absoluto.
 \end{itemize}
+
+\subsubsection*{Propiedades del valor absoluto}
+
+\begin{multicols}{2}
+\begin{enumerate}[label=(\arabic*)]
+    \item
+    \[
+        |x| = \sqrt{x^2}
+    \]
+
+    \item
+    \[
+        |x|^2 = x^2
+    \]
+
+    \item
+    \[
+        x + b \leq |x + b|
+    \]
+
+    \item
+    \[
+        |x - b| = |b - x|
+    \]
+
+    \item
+    \[
+        |x| \geq 0
+    \]
+
+    \item
+    \[
+        |xy| = |x|\cdot|y|
+    \]
+
+    \item
+    \[
+        \left|\frac{x}{y}\right| = \frac{|x|}{|y|} 
+        \quad (\text{con } y \neq 0)
+    \]
+
+    \item
+    \[
+        |x + y| \leq |x| + |y|
+    \]
+
+    \item
+    \[
+        ||x| - |y|| \leq |x - y|
+    \]
+
+    \item
+    \[
+        |x| < a 
+        \;\;\Leftrightarrow\;\; -a < x < a 
+        \quad (\text{para } a > 0)
+    \]
+
+    \item
+    \[
+        |x| \leq a 
+        \;\;\Leftrightarrow\;\; -a \leq x \leq a 
+        \quad (\text{para } a > 0)
+    \]
+
+    \item
+    \[
+        |x| > a 
+        \;\;\Leftrightarrow\;\; x < -a \;\text{o}\; x > a 
+        \quad (\text{para } a > 0)
+    \]
+
+    \item
+    \[
+        |x| \geq a 
+        \;\;\Leftrightarrow\;\; x \leq -a \;\text{o}\; x \geq a 
+        \quad (\text{para } a > 0)
+    \]
+\end{enumerate}
+\end{multicols}
 
 \subsubsection*{Propiedades de las funciones}
 \begin{itemize}
@@ -69,7 +141,7 @@ Las funciones pueden representarse de varias maneras:
     \item Dos pares $(x, y)$ y $(x, z)$ no pueden existir con el mismo $x$ y valores distintos de $y$.
 \end{itemize}
 
-\section{Funciones. Definición formal como conjunto de pares ordenados}
+\section*{Funciones. Definición formal como conjunto de pares ordenados}
 
 Una función \( f \) es un conjunto de pares ordenados \( (x,y) \), donde:
 \begin{itemize}
