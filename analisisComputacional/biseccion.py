@@ -7,7 +7,7 @@ getcontext().prec = 50  #Se le da una precisión alta como un Double float de C+
 
 class Biseccion():
     def __init__(self):
-        self.coeficientes = []
+        pass
 
     def insertar_ecuacion(self):
         gradoPolinomio = int(input("Inserte el grado del polinomio: "))
