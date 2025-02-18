@@ -6,3 +6,99 @@
 \end{enumerate}
 
 Para revisar el código de la solución de este problema, consulte la carpeta \textit{analisisComputacional} del repositorio donde he subido esta tarea: \url{https://github.com/johanP051/conceptosCalculoI/blob/main/analisisComputacional/biseccion.py}.
+
+\subsection*{Programa para la bisección}
+
+\begin{lstlisting}[style=jupyter]
+    import numpy as np
+    from decimal import Decimal, getcontext
+    
+    getcontext().prec = 50  #Se le da una precisión alta como un Double float de C++
+    
+    class Biseccion():
+        def __init__(self):
+            self.coeficientes = []
+    
+        def insertar_ecuacion(self):
+            gradoPolinomio = int(input("Inserte el grado del polinomio: "))
+            self.coeficientes = []
+    
+            for i in reversed(range(gradoPolinomio + 1)):
+                coeficiente = Decimal(input(f"Inserte el coeficiente de x^{i}: "))
+                self.coeficientes.append(coeficiente)
+        
+        def insertarIntervalo(self):
+            print("Ahora debe insertar los intervalos \n")
+            self.a = Decimal(input("Inserte el valor de [a]: "))
+            self.b = Decimal(input("Inserte el valor de [b]: "))
+    
+        def evaluar_funcion(self, x):
+            x = Decimal(x)
+            return np.polyval(self.coeficientes, x)
+        
+        def calcularRaiz(self):
+            self.x_inf = self.a
+            self.x_sup = self.b
+    
+            while True:
+                x_a = (self.x_sup + self.x_inf) / 2
+                signo = self.evaluar_funcion(self.x_inf) * self.evaluar_funcion(x_a)
+    
+                ## Haciendo el cambio de límites de intervalos
+                if signo < 0:
+                    self.x_sup = x_a
+                else:
+                    self.x_inf = x_a
+    
+                error = self.evaluar_funcion(x_a)
+    
+                if abs(error) <= Decimal('1E-3'):
+                    print(f"Resultado de la raíz: {x_a}")
+                    break
+                print(x_a)
+    
+    ec = Biseccion()
+    ec.insertar_ecuacion()
+    ec.insertarIntervalo()
+    ec.calcularRaiz()
+\end{lstlisting}
+
+\subsection*{Programa para la derivada}
+\begin{lstlisting}[style=jupyter]
+    import numpy as np
+
+    class DiferenciasFinitas():
+        def __init__(self):
+            pass
+    
+        def insertar_valores(self):
+            self.x = float(input("Inserte el valor de x a evaluar en la derivada: "))
+            self.h = float(input("Inserte el valor de h: "))
+    
+        def funcion(self, x):
+            return np.exp(x)
+    
+        def derivada_Orden1(self, x, h):
+            # f'(x) ≈ (f(x+h) - f(x)) / (h)
+            return (self.funcion(x + h) - self.funcion(x)) / (h)
+    
+        def derivada_Orden4(self, x, h):
+            # f'(x) ≈ [ -25f(x) + 48f(x + h) - 36f(x + 2h) + 16f(x + 3h) -3f(x + 4h) ] / (12h)
+            return (-25*self.funcion(x) + 48*self.funcion(x + h) - 36*self.funcion(x + 2*h) + 16*self.funcion(x + 3*h) - 3*self.funcion(x + 4*h)) / (12*h) 
+    
+        def calcular_derivadas(self):
+            d2 = self.derivada_Orden1(self.x, self.h)
+            d4 = self.derivada_Orden4(self.x, self.h)
+    
+            #Para verificar se revisa que d/dx e^x sea aproximadamente e^x, como lo dice la teoria
+            derivada_exacta = self.funcion(self.x)
+            
+            print(f"\nPara f(x) = e^x evaluada en 1 = {self.x}:")
+            print(f"Derivada (diferencias finitas progresivas orden 2): {d2}")
+            print(f"Derivada (diferencias finitas progresivas orden 4): {d4}")
+            print(f"Derivada exacta: {derivada_exacta}")
+    
+    dx = DiferenciasFinitas()
+    dx.insertar_valores()
+    dx.calcular_derivadas()
+\end{lstlisting}
